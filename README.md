@@ -1,5 +1,12 @@
-# Getting Started with Create React App
+# Around the U.S.
 
-Around the U.S. project on React, featuring authorization and registration.
+## Getting Started
 
-This repository will contain your own front-end project on React with added authorization and registration features.
+This project is a student project in the Yandex Practicum course.
+
+This repository contain front-end project on React with added authorization and registration features.
+
+
+## Development details
+
+This site is written in HTML, CSS and JS lang with REACT library.

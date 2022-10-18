@@ -1,9 +1,0 @@
-.auth-form__footer {
-    max-height: 400px;
-    flex-grow: 1;
-    display: flex;
-    text-align: center;
-    flex-direction: column-reverse;
-    box-sizing: border-box;
-    width: 100%;
-}

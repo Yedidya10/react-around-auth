@@ -266,8 +266,8 @@ function App() {
             )}
           </Route>
         </Switch>
-
-        <Footer />
+              { loggedIn && <Footer /> }
+        
 
         <EditProfilePopup
           isOpen={isEditProfilePopupOpen}
