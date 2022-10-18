@@ -1,0 +1,25 @@
+.header__links {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+    list-style: none;
+    color: white;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .header__links {
+      display: none;
+    }
+
+    .header__links_menu {
+      display: flex;
+    }
+
+    .header__links_signup-login-page {
+      display: block;
+    }
+  }
