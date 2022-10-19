@@ -19,7 +19,7 @@ const EditAvatarPopup = ({ isOpen, onClose, onUpdateAvatar, isLoading }) => {
       name="avatar"
       isOpen={isOpen}
       onClose={onClose}
-      buttonText={`${isLoading ? "Saving..." : "Save"}`}
+      buttonText={isLoading ? 'Saving...' : 'Save'}
       onSubmit={handleSubmit}
     >
       <fieldset className="form__fieldset">

@@ -24,9 +24,7 @@ const InfoTooltip = ({ isOpen, onClose, type, name }) => {
         alt={`${success ? "successful" : "failed"} attempt`}
       />
       <h2 className="tooltip__text">
-        {success
-          ? "Success! You have now been registered."
-          : "Oops, something went wrong! Please try again."}
+        {success ? "Success! You have now been registered." : "Oops, something went wrong! Please try again."}
       </h2>
     </Popup>
   );
