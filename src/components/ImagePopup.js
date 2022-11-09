@@ -1,5 +1,5 @@
-import React from "react";
-import Popup from "./Popup";
+import React from 'react';
+import Popup from './Popup';
 
 const ImagePopup = (props) => {
   return (

@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import PopupWithForm from "./PopupWithForm";
+import React, { useRef } from 'react';
+import PopupWithForm from './PopupWithForm';
 
 const EditAvatarPopup = ({ isOpen, onClose, onUpdateAvatar, isLoading }) => {
   const url = useRef();
@@ -10,7 +10,7 @@ const EditAvatarPopup = ({ isOpen, onClose, onUpdateAvatar, isLoading }) => {
   }
 
   React.useEffect(() => {
-    url.current.value = "";
+    url.current.value = '';
   }, [isOpen]);
 
   return (

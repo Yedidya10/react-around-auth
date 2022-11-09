@@ -9,8 +9,8 @@ class Api {
     else return Promise.reject(res.statusText);
   }
 
-  _request(url, headers) {
-    return fetch(url, headers).then(this._checkResponse);
+  async _request(url, headers) {
+    return await fetch(url, headers).then(this._checkResponse);
   }
 
   getInitialCards() {
@@ -28,7 +28,7 @@ class Api {
   setUserInfo({ name, about }) {
     return this._request(`${this._baseUrl}/users/me`, {
       headers: this._headers,
-      method: "PATCH",
+      method: 'PATCH',
       body: JSON.stringify({
         name: name,
         about: about,
@@ -39,7 +39,7 @@ class Api {
   setUserAvatar(avatar) {
     return this._request(`${this._baseUrl}/users/me/avatar`, {
       headers: this._headers,
-      method: "PATCH",
+      method: 'PATCH',
       body: JSON.stringify({
         avatar: avatar,
       }),
@@ -49,7 +49,7 @@ class Api {
   createCard(data) {
     return this._request(`${this._baseUrl}/cards`, {
       headers: this._headers,
-      method: "POST",
+      method: 'POST',
       body: JSON.stringify(data),
     });
   }
@@ -57,25 +57,32 @@ class Api {
   deleteCard(cardId) {
     return this._request(`${this._baseUrl}/cards/${cardId}`, {
       headers: this._headers,
-      method: "DELETE",
+      method: 'DELETE',
     });
   }
 
   toggleLike(cardId, isLiked) {
     let method;
-    isLiked ? (method = "DELETE") : (method = "PUT");
+    isLiked ? (method = 'DELETE') : (method = 'PUT');
     return this._request(`${this._baseUrl}/cards/likes/${cardId}`, {
       headers: this._headers,
       method: method,
     });
   }
+
+  updateToken = () => {
+    this.headers = {
+      authorization: `Bearer ${localStorage.getItem('jwt')}`,
+      'Content-Type': 'application/json',
+    };
+  };
 }
 
 const api = new Api({
-  baseUrl: "https://around.nomoreparties.co/v1/cohort-3-en",
+  baseUrl: `https://api.yedidya.students.nomoredomainssbs.ru`,
   headers: {
-    authorization: "a987f557-c5fc-4df9-a055-4063817e4bf0",
-    "Content-Type": "application/json",
+    authorization: `Bearer ${localStorage.getItem('jwt')}`,
+    'Content-Type': 'application/json',
   },
 });
 

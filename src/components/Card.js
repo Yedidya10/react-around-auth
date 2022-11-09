@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { CurrentUserContext } from "../contexts/CurrentUserContext";
+import React, { useContext } from 'react';
+import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
 const Card = (props) => {
   const currentUser = useContext(CurrentUserContext);
@@ -9,7 +9,7 @@ const Card = (props) => {
   const isLiked = props.card.likes.some((user) => user._id === currentUser._id);
 
   const cardLikeButtonClassName = `card__like-button ${
-    isLiked && "card__like-button_active"
+    isLiked && 'card__like-button_active'
   }`;
 
   function handleClick() {

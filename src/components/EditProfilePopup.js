@@ -1,7 +1,7 @@
-import React, { useContext, useEffect } from "react";
-import PopupWithForm from "./PopupWithForm";
-import { CurrentUserContext } from "../contexts/CurrentUserContext";
-import { useForm } from "../utils/hooks/useForm";
+import React, { useContext, useEffect } from 'react';
+import PopupWithForm from './PopupWithForm';
+import { CurrentUserContext } from '../contexts/CurrentUserContext';
+import { useForm } from '../utils/hooks/useForm';
 
 const EditProfilePopup = ({ isOpen, onClose, onUpdateUser, isLoading }) => {
   const currentUser = useContext(CurrentUserContext);
@@ -24,7 +24,7 @@ const EditProfilePopup = ({ isOpen, onClose, onUpdateUser, isLoading }) => {
     <PopupWithForm
       title="Edit profile"
       name="edit-profile"
-      buttonText={`${isLoading ? "Saving..." : "Save"}`}
+      buttonText={`${isLoading ? 'Saving...' : 'Save'}`}
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={handleSubmit}
@@ -38,7 +38,7 @@ const EditProfilePopup = ({ isOpen, onClose, onUpdateUser, isLoading }) => {
           placeholder="Name"
           minLength="2"
           maxLength="40"
-          value={values.name || ""}
+          value={values.name || ''}
           onChange={handleChange}
           required
         />
@@ -51,7 +51,7 @@ const EditProfilePopup = ({ isOpen, onClose, onUpdateUser, isLoading }) => {
           placeholder="About me"
           minLength="2"
           maxLength="200"
-          value={values.about || ""}
+          value={values.about || ''}
           onChange={handleChange}
           required
         />

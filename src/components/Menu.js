@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export function Menu(props) {
   const signoutClick = () => {
@@ -9,7 +9,7 @@ export function Menu(props) {
   return (
     <div
       className={`header__menu ${
-        props.isMenuOpen ? "header__menu_active" : ""
+        props.isMenuOpen ? 'header__menu_active' : ''
       }`}
     >
       <ul className="header__links header__links_menu">

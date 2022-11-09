@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Menu } from "./Menu.js";
-import logo from "../images/logo.svg";
-import menuIcon from "../images/icons/menu_icon.svg";
-import closeIcon from "../images/icons/close_icon.svg";
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu } from './Menu.js';
+import logo from '../images/logo.svg';
+import menuIcon from '../images/icons/menu_icon.svg';
+import closeIcon from '../images/icons/close_icon.svg';
 
 const Header = ({ loggedIn, email, handleSignout }) => {
   const location = useLocation();
-  const isLogin = location.pathname === "/signin";
-  const isRegister = location.pathname === "/signup";
+  const isLogin = location.pathname === '/signin';
+  const isRegister = location.pathname === '/signup';
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -29,7 +29,7 @@ const Header = ({ loggedIn, email, handleSignout }) => {
         <nav className="header_nav">
           <ul
             className={`header__links ${
-              isLogin || isRegister ? "header__links_signup-login-page" : ""
+              isLogin || isRegister ? 'header__links_signup-login-page' : ''
             }`}
           >
             {isLogin && (

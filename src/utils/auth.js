@@ -1,4 +1,4 @@
-const BASE_URL = "https://register.nomoreparties.co";
+const BASE_URL = 'https://api.yedidya.students.nomoredomainssbs.ru';
 
 const customFetch = (url, headers) => {
   return fetch(url, headers).then((res) =>
@@ -8,10 +8,10 @@ const customFetch = (url, headers) => {
 
 export const register = (email, password) => {
   return customFetch(`${BASE_URL}/signup`, {
-    method: "POST",
+    method: 'POST',
     headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({ email, password }),
   });
@@ -19,10 +19,10 @@ export const register = (email, password) => {
 
 export const login = (email, password) => {
   return customFetch(`${BASE_URL}/signin`, {
-    method: "POST",
+    method: 'POST',
     headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({ email, password }),
   });
@@ -30,10 +30,10 @@ export const login = (email, password) => {
 
 export const checkToken = (token) => {
   return customFetch(`${BASE_URL}/users/me`, {
-    method: "GET",
+    method: 'GET',
     headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
       Authorization: `Bearer ${token}`,
     },
   });

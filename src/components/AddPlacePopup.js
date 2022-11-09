@@ -1,6 +1,6 @@
-import React from "react";
-import PopupWithForm from "./PopupWithForm";
-import { useForm } from "../utils/hooks/useForm";
+import React from 'react';
+import PopupWithForm from './PopupWithForm';
+import { useForm } from '../utils/hooks/useForm';
 
 const AddPlacePopup = ({ isOpen, onClose, onAddPlaceSubmit, isLoading }) => {
   const { values, handleChange, setValues } = useForm({});
@@ -21,7 +21,7 @@ const AddPlacePopup = ({ isOpen, onClose, onAddPlaceSubmit, isLoading }) => {
       name="add-place"
       isOpen={isOpen}
       onClose={onClose}
-      buttonText={`${isLoading ? "Creating..." : "Create"}`}
+      buttonText={`${isLoading ? 'Creating...' : 'Create'}`}
       onSubmit={handleSubmit}
     >
       <fieldset className="form__fieldset">
@@ -33,7 +33,7 @@ const AddPlacePopup = ({ isOpen, onClose, onAddPlaceSubmit, isLoading }) => {
           className="form__input"
           minLength="1"
           maxLength="30"
-          value={values.name || ""}
+          value={values.name || ''}
           onChange={handleChange}
           required
         />
@@ -44,7 +44,7 @@ const AddPlacePopup = ({ isOpen, onClose, onAddPlaceSubmit, isLoading }) => {
           name="link"
           placeholder="Image URL"
           className="form__input"
-          value={values.link || ""}
+          value={values.link || ''}
           onChange={handleChange}
           required
         />

@@ -21,7 +21,7 @@ const Register = ({ handleRegister, isLoading }) => {
             name="email"
             className="auth-form__input"
             placeholder="Email"
-            value={values.email || ""}
+            value={values.email || ''}
             onChange={handleChange}
           />
           <input
@@ -29,7 +29,7 @@ const Register = ({ handleRegister, isLoading }) => {
             name="password"
             className="auth-form__input"
             placeholder="Password"
-            value={values.password || ""}
+            value={values.password || ''}
             onChange={handleChange}
           />
         </div>
